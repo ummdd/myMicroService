@@ -27,7 +27,6 @@ public class BaseDatabase {
                         isEqual = true;
                 }
 
-
                 if (!isEqual)
                     ps.executeQuery(String.format("create database %s",externalDbName));
             }
