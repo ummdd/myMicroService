@@ -13,6 +13,7 @@ public class WebApplication {
                 new Log("Берёза карликовая", 5));
 
 
+
         logs.stream().map(x -> x.getType()).forEach(System.out::println);
         Stream.generate(Math::random).limit(100).forEach(System.out::println);
 
