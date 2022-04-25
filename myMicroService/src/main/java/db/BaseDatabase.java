@@ -11,7 +11,7 @@ public class BaseDatabase {
         String user = "postgres";
         String password = "1";
         String dbName = "";
-        String externalDbName = "postgres";
+        String externalDbName = "my_microservice";
         boolean isEqual = false;
 
         try {
@@ -26,7 +26,6 @@ public class BaseDatabase {
                     if (dbName.equals(externalDbName))
                         isEqual = true;
                 }
-
                 if (!isEqual)
                     ps.executeQuery(String.format("create database %s",externalDbName));
             }
